@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--     Câu 2: Xây dựng hàm trả về vị trí của phần tử cần tìm trong một mảng cho-->
+<!--     trước (Giả sử tất cả các phần tử trong mảng không giống nhau). Hàm có 2-->
+<!--     tham số: số phần tử cần tìm, mảng cho trước.-->
+<!--     Viết chương trình với một mảng số nguyên được khởi tạo trước. Nhập vào một-->
+<!--     giá trị bất kỳ, sau đó kiểm tra xem giá trị số nguyên bất kỳ vừa nhập có nằm-->
+<!--     trong mảng đã nhập hay không.-->
+<script>
+
+    function check(index, arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (index === arr[i]) {
+                alert(index + ' ' + 'thuộc mảng cho trước,' + ' có chỉ số là:' + ' ' + i);
+                return i;
+            }
+
+        }
+        alert(index + ' ' + 'không thuộc mảng cho trước');
+    }
+
+    let arr = [1, 5, 6, 7, 8, 9, 2, 4];
+    let Number = +prompt("nhập vào số cần check:")
+    check(Number, arr);
+</script>
+</body>
+</html>
+
+
+//     let arr = [1, 5, 6, 8, 9, 7, 2]
+//     let number = +prompt("nhập số cần kiểm tra:")
+//     let check = true;
+//
+//     function checkMang(arr, number) {
+//         check = true
+//         for (let i = 0; i < 10; i++) {
+//             if (arr[i] === number) {
+//                 check = false;
+//             }
+//         }
+//         if (check === false) {
+//             document.write(+number + " nằm trong mảng:")
+//         } else {
+//             document.write(+number + " không nằm trong mảng:")
+//         }
+//     }
+// checkMang(arr,number);
+
+
+

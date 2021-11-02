@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Câu 3: Viết hàm đếm số ký tự nguyên âm trong một chuỗi cho trước. Hàm có-->
+<!--1 tham số truyền vào mà một mảng các ký tự. Hàm trả về false nếu không có-->
+<!--ký tự nguyên âm nào.-->
+<!--Viết chương trình nhập vào một chuỗi bất kỳ. Gọi hàm tìm số ký tự nguyên-->
+<!--âm vừa xây dựng ở trên.-->
+<!--Nguyên âm là các ký tự: a, o, e, u, i-->
+
+<script>
+    function check(string) {
+        let arr = ["a", "e", "i", "o", "u"];
+        let count = 0;
+        for (let i = 0; i < string.length; i++) {
+            if (arr.indexOf(string[i]) !== -1) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count;
+        } else {
+            return false;
+        }
+    }
+
+    let string = prompt("nhập vào một chuỗi :");
+    check(string);
+    alert('Số kí tự nguyên âm ' + ' ' + check(string));
+</script>
+</body>
+</html>
